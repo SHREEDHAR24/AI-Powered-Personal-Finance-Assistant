@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+backend/data/*.db
+backend/data/previews/
+backend/.env
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.env.local
+.env
+.DS_Store
+*.log
+.idea/
+.vscode/

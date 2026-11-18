@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #f3efe6;
+  --surface: #fffdf8;
+  --ink: #1c1915;
+  --muted: #6f675e;
+  --line: #e4d8c8;
+  --accent: #0f6e6b;
+  --accent-soft: #e5f4f3;
+  --good: #1f7a4d;
+  --bad: #b42318;
+  --warn: #9a3412;
+  --shadow: 0 18px 50px rgba(60, 42, 20, 0.06);
+}
+
+.dark {
+  --bg: #101412;
+  --surface: #181d1a;
+  --ink: #f6f1e8;
+  --muted: #b7aea3;
+  --line: #2c3330;
+  --accent: #8fd9d4;
+  --accent-soft: #163330;
+  --good: #8ee4b8;
+  --bad: #ffb4ab;
+  --warn: #fdba74;
+  --shadow: none;
+}
+
+@theme inline {
+  --color-canvas: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-good: var(--good);
+  --color-bad: var(--bad);
+  --color-warn: var(--warn);
+  --font-sans: var(--font-dm);
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-dm), sans-serif;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+
+input, select, textarea {
+  color: var(--ink);
+  background: var(--surface);
+}
+
+::placeholder {
+  color: var(--muted);
+}
